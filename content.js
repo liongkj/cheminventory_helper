@@ -18,7 +18,6 @@ function downloadCsv() {
     fetchToken().then((token) => {
         chrome.runtime.sendMessage({ action: "makeApiCall", jwtToken: token }, function (response) {
             // convert to excel and download
-            console.log(response)
             const data = response["data"];
             const headers = Object.keys(data[0]);
             const csv = [
@@ -46,7 +45,7 @@ function downloadCsv() {
         return true
     }).catch((error) => {
         console.error(error);
-        return false
+        alert("Error: " + error); // Provide user feedback
     });
 
 }
@@ -62,25 +61,3 @@ function downloadCsv() {
     sibling.parentNode.insertBefore(button, sibling);
 
 })();
-// function hookChromeEvents() {
-
-//     chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
-//         console.log(JSON.stringify(request));
-//         switch (request.action) {
-//             case "returnData":
-//                 return true
-//             // case "fetchToken":
-//             //     fetchToken().then((token) => {
-//             //         debugger
-//             //         chrome.runtime.sendMessage({ action: "makeApiCall", jwtToken: token }, function (response) { })
-//             //         return true
-//             //     }).catch((error) => {
-//             //         console.error(error);
-//             //         return false
-//             //     });
-
-//         }
-//     })
-// }
-
-// hookChromeEvents();

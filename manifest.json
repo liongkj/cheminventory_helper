@@ -2,10 +2,7 @@
     "manifest_version": 3,
     "name": "Cheminventory Fetch",
     "version": "1.0",
-    "permissions": [
-        "storage",
-        "activeTab"
-    ],
+    "permissions": [],
     "background": {
         "service_worker": "background.js"
     },

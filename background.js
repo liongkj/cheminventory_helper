@@ -1,6 +1,6 @@
 chrome.runtime.onInstalled.addListener(() => {
     chrome.action.setBadgeText({
-        text: "OFF",
+        text: "ON",
     });
 });
 
@@ -23,33 +23,17 @@ function makeApiCall(token) {
         .catch(error => console.error('Error:', error));
 }
 
-chrome.action.onClicked.addListener(async (tab) => {
-
-    // Fetch JWT token from local storage
-
-    chrome.runtime.sendMessage({ action: "fetchToken" }, function (response) {
-        console.log(response)
-        if (response.jwtToken) {
-            console.log("logged in")
-            resolve(response.jwtToken);
-        } else {
-            reject("JWT token not found in local storage");
-        }
-    })
-})
-
 
 chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
     switch (request.action) {
         case "makeApiCall":
             makeApiCall(request.jwtToken).then((response) => {
-                console.log(response)
                 sendResponse(response)
                 return true
             }).catch((error) => {
                 console.error(error);
                 return false
             })
-            return true
     }
+    return true
 })
