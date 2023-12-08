@@ -1,6 +1,9 @@
-Chrome extension to all download all orders in [ChemInventory](https://www.cheminventory.net/). 
+Chrome extension to all download all orders in [ChemInventory](https://www.cheminventory.net/). Currently only allow download pending orders.
 
 **Extension is under review in Chrome Web Store.**
+
+# Screenshot
+![Screenshot](./img/ss1.jpg)
 
 ## Test locally
 [Steps](https://developer.chrome.com/docs/extensions/get-started/tutorial/hello-world#load-unpacked)
