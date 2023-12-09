@@ -1,6 +1,6 @@
 {
     "manifest_version": 3,
-    "name": "Cheminventory Fetch",
+    "name": "Cheminventory Helper",
     "version": "1.0",
     "permissions": [],
     "background": {
