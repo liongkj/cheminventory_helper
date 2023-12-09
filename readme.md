@@ -14,6 +14,7 @@ git clone git@github.com:liongkj/cheminventory_helper.git cheminventory_helper
 ```
 
 2.  In chrome browser or edge browser
+
 ```
 chrome://extensions
 
@@ -24,7 +25,8 @@ edge://extensions
 
 4. "Load unpacked" and select the folder you git cloned in step 1. 
 
-Follow the steps here to load the extension locally.
+
+If instructions unclear, please follow the official steps here from google.
 
 [Steps](https://developer.chrome.com/docs/extensions/get-started/tutorial/hello-world#load-unpacked)
 
