@@ -1,6 +1,6 @@
 Chrome extension to all download all orders in [ChemInventory](https://www.cheminventory.net/). Currently only allow download pending orders.
 
-**Extension is under review in Chrome Web Store.**
+Chrome Web Store [Link](https://chromewebstore.google.com/detail/cheminventory-helper/kfahdlfoecmcclginpncllkdnhjlalka)
 
 # Screenshot
 ![Screenshot](./img/ss1.jpg)
@@ -30,7 +30,10 @@ If instructions unclear, please follow the official steps here from google.
 
 [Steps](https://developer.chrome.com/docs/extensions/get-started/tutorial/hello-world#load-unpacked)
 
+# TODO
 
+1. Fix the onload logic, currently the extention activates on page reload
+2. Allow custom field renaming? 
 
 # Disclaimer
 This is just a hobby project I did for my friend to understand how chrome extensions work. I am not affiliated with ChemInventory in any way. I am not responsible for any damage caused by this extension. Use at your own risk.
