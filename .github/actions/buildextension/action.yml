@@ -7,14 +7,6 @@ runs:
       with:
         node-version: 18
 
-    - name: Install packages
-      run: npm ci
-      shell: bash
-
-    - name: Build extension
-      run: npm run build --if-present
-      shell: bash
-
     - name: Pack extension
       working-directory: out
       run: zip -r extension-${{ github.event.pull_request.head.sha }}.zip *
