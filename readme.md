@@ -48,6 +48,3 @@ This extension does not collect any data from the user. It only downloads the or
 
 # Contact
 If you have any questions, feel free to contact me at fantasticbabii[at]gmail.com.
-
-
-test
