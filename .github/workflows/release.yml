@@ -24,7 +24,9 @@ jobs:
 
 
         with:
-            extension-id: ${{ secrets.EXTENSION_ID }}
-            client-id: ${{ secrets.CLIENT_ID }}
-            client-secret: ${{ secrets.CLIENT_SECRET }}
-            refresh-token: ${{ secrets.REFRESH_TOKEN }}
+          action: upload
+          extensionID: ${{ secrets.EXTENSION_ID }}
+          clientID: ${{ secrets.CLIENT_ID }}
+          clientSecret: ${{ secrets.CLIENT_SECRET }}
+          clientRefreshToken: ${{ secrets.REFRESH_TOKEN }}
+          extensionFile: extension-${{ github.event.pull_request.head.sha }}.zip
