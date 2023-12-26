@@ -4,6 +4,18 @@ chrome.runtime.onInstalled.addListener(() => {
     });
 });
 
+// chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
+//     if (changeInfo.url) {
+//         console.log(changeInfo.url)
+//         const url = new URL(changeInfo.url);
+//         if (url.hostname === 'app.cheminventory.net') {
+//             chrome.action.setBadgeText({ text: 'ON', tabId: tabId });
+//         } else {
+//             chrome.action.setBadgeText({ text: '', tabId: tabId });
+//         }
+//     }
+// });
+
 // Function to make API call
 function makeApiCall(token) {
     const url = 'https://app.cheminventory.net/api/order/load';

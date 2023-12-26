@@ -50,16 +50,21 @@ function downloadCsv() {
 
 }
 
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', afterDOMLoaded);
+} else {
+    afterDOMLoaded();
+}
 
-
-document.addEventListener('DOMContentLoaded', (event) => {
-    (async () => {
-        const button = document.createElement('button');
-        button.textContent = 'Download all';
-        button.className = "btn btn-xs btn-primary pull-right"
-        button.addEventListener('click', downloadCsv);
-        // sibling button id=btnorderdownload
-        const sibling = document.getElementById('btnorderdownload');
-        sibling.parentNode.insertBefore(button, sibling);
-    })();
-});
+function afterDOMLoaded() {
+    console.log("loaded")
+    // (async () => {
+    const button = document.createElement('button');
+    button.textContent = 'Download all';
+    button.className = "btn btn-xs btn-primary pull-right"
+    button.addEventListener('click', downloadCsv);
+    // sibling button id=btnorderdownload
+    const sibling = document.getElementById('btnorderdownload');
+    sibling.parentNode.insertBefore(button, sibling);
+    // })();
+};
